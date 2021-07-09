@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Custom styles for this template-->
+<link href="css/sb-admin-2.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<!-- Custom fonts for this template-->
+<link href="fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h2>Chat Messages</h2>
+<div class="row">
+    <div class="col">
+        <div class="container">
+            <i class="fa fa-user"></i>
+            <p>Hello. How are you today?</p>
+            <span class="time-right">11:00</span>
+        </div>
+        
+        <div class="container darker">
+            <i class="fa fa-user right"></i>
+            <p>Hey! I'm fine. Thanks for asking!</p>
+            <span class="time-left">11:01</span>
+        </div>
+        
+        <div class="container">
+            <i class="fa fa-user"></i>
+            <p>Sweet! So, what do you wanna do today?</p>
+            <span class="time-right">11:02</span>
+        </div>
+        
+        <div class="container darker">
+            <i class="fa fa-user right"></i>
+            <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+            <span class="time-left">11:05</span>
+        </div>
+    </div>
+</div>
+<div class="row footer">
+    <div class="col">
+        <div style="width:100%;">
+            <textarea style="width:100%;" id="message" name="message"></textarea>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap core JavaScript-->
+<script src="jquery/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+    $('#message').on('keydown', function(event) {
+        if (event.keyCode == 13){
+            if (!event.shiftKey) {
+                event.preventDefault();
+                console.log("enter key pressed");
+            }else{
+                console.log("shift enter pressed");
+            }
+        }
+    });
+</script>
+</body>
+</html>
